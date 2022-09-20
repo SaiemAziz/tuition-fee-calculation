@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Calculation</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="text-white min-h-screen" style="background-image: linear-gradient(#470700,#000000);">
+    <div class="container max-w-6xl mx-auto px-3">
+        <h1 class="text-center text-5xl my-7 font-bold">Tuition Fee Collection</h1>
+
+        <!-- all months list -->
+        <div class="my-5 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-5" id="months-div">
+            
+        </div>
+        <div class="w-max mx-auto">
+            <button class="bg-rose-700 text-center rounded-lg py-2 hover:scale-125 hover:transition-transform px-5 my-5" onclick="clearHistory()">Clear All History</button>
+        </div>
+
+        <!-- current month and money collected -->
+        <h1 class="text-center text-3xl">Month: <span class="italic text-blue-400 font-bold" id="current-month"></span></h1>
+        <h1 class="text-center text-3xl my-2">Money Collected: <span class="text-green-400 italic font-bold" id="current-month-money"></span> Taka</h1>
+
+        <div class="my-5 grid grid-cols-1 md:grid-cols-3 gap-5">
+            
+
+            <!-- due students name list -->
+            <div class="">
+                <div class="bg-red-900 p-5 rounded-3xl" id="due">
+                    <p class="text-3xl text-center" id="due-headline">Due Names</p>
+                    <ol class="text-center text-orange-200" id="due-names">
+                        
+                    </ol>
+                </div>
+                <div class="w-max mx-auto">
+                    <button class="bg-rose-700 text-center rounded-lg py-2 px-5 my-5 hover:scale-125 hover:transition-transform" onclick="clearHistoryMonth()">Clear Monthly History</button>
+                </div>
+            </div>
+
+
+            <!-- students cards -->
+            <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-5" id="students-div">
+    
+            </div>
+        </div>
+    </div>
+    <script src="js/student.js"></script>
+</body>
+</html>
