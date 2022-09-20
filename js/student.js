@@ -54,7 +54,7 @@ let displayStudents = (month) => {
             studentBlock.classList.add('bg-green-900');
             studentBlock.innerHTML = `
                         <p class="text-3xl mb-5 text-center">${student.name}</p>
-                        <p class="text-1xl mb-3 text-center text-green-200">Payment: ${student.honorariam} Taka</p>
+                        <p class="text-1xl mb-3 text-center text-green-200">Honorariam: ${student.honorariam} Taka</p>
                         <p class="text-2xl text-center">Status: <span id="${student.name.toLowerCase()}-status">Paid</span></p>
             `;
         }
@@ -74,10 +74,10 @@ let displayStudents = (month) => {
             studentBlock.classList.add('bg-[#81433de8]');
             studentBlock.innerHTML = `
                         <p class="text-3xl mb-5 text-center">${student.name}</p>
-                        <p class="text-1xl mb-3 text-center text-amber-300">Payment: ${student.honorariam} Taka</p>
+                        <p class="text-1xl mb-3 text-center text-amber-300">Honorariam: ${student.honorariam} Taka</p>
                         <p class="text-2xl text-center">Status: <span id="${student.name.toLowerCase()}-status">Due</span></p>
                         <div class="w-max mx-auto mt-5" id="${student.name.toLowerCase()}-paid">
-                            <button class="bg-green-200 text-green-800 font-bold py-2 hover:scale-125 hover:transition-transform px-10 rounded-lg" onclick="studentPaid('${student.name.toLowerCase()}', '${month}')">Paid</button>
+                            <button class="bg-green-200 text-green-800 font-bold py-2 md:hover:scale-125 md:hover:transition-transform px-10 rounded-lg" onclick="studentPaid('${student.name.toLowerCase()}', '${month}')">Paid</button>
                         </div>
             `;
         }
@@ -154,9 +154,9 @@ let showMonths = () => {
         btn.classList.add('text-center');
         btn.classList.add('rounded-lg');
         btn.classList.add('py-2');
-        btn.classList.add('hover:scale-125');
-        btn.classList.add('hover:transition-transform');
-        btn.classList.add('hover:bg-[#920000]');
+        btn.classList.add('md:hover:scale-125');
+        btn.classList.add('md:hover:transition-transform');
+        btn.classList.add('md:hover:bg-[#920000]');
         btn.setAttribute('onclick', `displayStudents('${month}')`)
         document.getElementById('months-div').appendChild(btn);
     });
